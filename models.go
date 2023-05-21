@@ -40,18 +40,27 @@ type TimeSignature struct {
 }
 
 type Song struct {
-	SongId         string          `json:"songId"         `
-	Title          string          `json:"title"      `
-	Artist         string          `json:"artist"     `
-	Bpms           []Bpm           `json:"bpms"           `
-	TimeSignatures []TimeSignature `json:"timeSignatures" `
-	Charts         []Chart         `json:"charts"`
-	PackId         string          `json:"packId"         db:"packid"`
-	PackName       string          `json:"packName"       db:"name"`
-	BannerPath     string          `json:"bannerPath" db:"banner_path"`       // looks like "PackName/SongName/banner.png" or "PackName/media/banner.png"
-	MusicPath      string          `json:"musicPath" db:"music_path"`         // looks like "PackName/SongName/music.ogg" or "PackName/media/music.ogg"
-	SongDirPath    string          `json:"songDirPath" db:"song_dir_path"`    // looks like "PackName/SongName"
-	FileExtension  string          `json:"fileExtension" db:"file_extension"` // looks like "sm" or "ssc"
+	SongId           string          `json:"songId"         `
+	Version          string          `json:"version" `
+	Title            string          `json:"title"      `
+	Subtitle         string          `json:"subtitle"   `
+	Artist           string          `json:"artist"     `
+	TitleTranslit    string          `json:"titleTranslit" `
+	SubtitleTranslit string          `json:"subtitleTranslit" `
+	ArtistTranslit   string          `json:"artistTranslit" `
+	Genre            string          `json:"genre"      `
+	Origin           string          `json:"origin"     `
+	SongType         string          `json:"songType"   `
+	SongCategory     string          `json:"songCategory" `
+	Bpms             []Bpm           `json:"bpms"           `
+	TimeSignatures   []TimeSignature `json:"timeSignatures" `
+	Charts           []Chart         `json:"charts"`
+	PackId           string          `json:"packId"         db:"packid"`
+	PackName         string          `json:"packName"       db:"name"`
+	BannerPath       string          `json:"bannerPath" db:"banner_path"`       // looks like "PackName/SongName/banner.png" or "PackName/media/banner.png"
+	MusicPath        string          `json:"musicPath" db:"music_path"`         // looks like "PackName/SongName/music.ogg" or "PackName/media/music.ogg"
+	SongDirPath      string          `json:"songDirPath" db:"song_dir_path"`    // looks like "PackName/SongName"
+	FileExtension    string          `json:"fileExtension" db:"file_extension"` // looks like "sm" or "ssc"
 }
 
 type Pack struct {
