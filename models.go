@@ -67,7 +67,7 @@ type Pack struct {
 	PackId       string `json:"packId"   db:"packid"`
 	PackName     string `json:"packName" db:"name"`
 	DownloadLink string `json:"downloadLink" db:"download_link"`
-	BannerPath   string `json:"bannerPath" db:"pack.banner_path"`
+	BannerPath   string `json:"bannerPath" db:"pack.pack_banner_path"`
 	Songs        []Song `json:"songs"`
 }
 
